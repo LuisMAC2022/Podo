@@ -1,1 +1,663 @@
-<!DOCTYPE html> <html lang="es"> <head> <meta charset="UTF-8" /> <title>Historia Clínica Podológica</title> <style> body { font-family: Arial, sans-serif; margin: 20px; } label { display: block; margin-top: 10px; font-weight: bold; } input, select, textarea { width: 100%; padding: 5px; margin-top: 5px; } .section { border: 1px solid #ccc; padding: 15px; margin-top: 20px; } .section h2 { margin-top: 0; } .checkbox-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 5px; } </style> </head> <body> <h1>Historia Clínica Podológica</h1> <form> <div class="section"> <h2>Datos Generales</h2> <label>Nombre<input type="text" /></label> <label>Sexo<input type="text" /></label> <label>Edad<input type="number" /></label> <label>Peso<input type="text" /></label> <label>Estatura<input type="text" /></label> <label>No. Calzado<input type="text" /></label> <label>Ocupación Actual<input type="text" /></label> <label>Ocupación Anterior<input type="text" /></label> <label>Domicilio<input type="text" /></label> <label>Teléfono<input type="text" /></label> <label>Cel<input type="text" /></label> <label>Email<input type="email" /></label> </div> <div class="section"> <h2>Motivo de la Consulta</h2> <textarea rows="3"></textarea> </div> <div class="section"> <h2>Padecimiento Actual</h2> <label>Fecha del 1er síntoma<input type="date" /></label> <label>Localización<input type="text" /></label> <label>Cómo inició<textarea rows="2"></textarea></label> <label>Circunstancia desencadenante o que lo modifica<textarea rows="2"></textarea></label> <label>Frecuencia: <select> <option>Día</option> <option>Noche</option> <option>Intermitente</option> </select></label> <label>Tipo de dolor<input type="text" /></label> </div> <div class="section"> <h2>Antecedentes Familiares</h2> <div class="checkbox-grid"> <label><input type="checkbox"> Alergias</label> <label><input type="checkbox"> Hemofilia</label> <label><input type="checkbox"> Hallux Valgus</label> <label><input type="checkbox"> Cardiopatías</label> <label><input type="checkbox"> Inmunodeficiencia</label> <label><input type="checkbox"> Hipoglucemia</label> <label><input type="checkbox"> Juanete Sastre</label> <label><input type="checkbox"> Artritis</label> <label><input type="checkbox"> Diabetes Mellitus</label> <label><input type="checkbox"> Hipertensión</label> <label><input type="checkbox"> Gota</label> <label><input type="checkbox"> Pie Plano</label> <label><input type="checkbox"> Anemia</label> </div> </div> <div class="section"> <h2>Antecedentes Personales No Patológicos</h2> <label>Fuma: <select><option>Sí</option><option>No</option></select></label> <label>Consume bebidas alcohólicas: <select><option>Sí</option><option>No</option></select></label> <label>Medicamentos y/o drogas: <select><option>Sí</option><option>No</option></select></label> <label>Realiza actividad física: <select><option>Sí</option><option>No</option></select></label> <label>¿Cuál?<input type="text" /></label> <label>Frecuencia<input type="text" /></label> <label>Comparte calzado: <select><option>Sí</option><option>No</option></select></label> <label>Frecuenta lugares públicos descalzo: <select><option>Sí</option><option>No</option></select></label> </div> <div class="section"> <h2>Antecedentes Personales Patológicos</h2> <div class="checkbox-grid"> <label><input type="checkbox"> Cirugías Ortopédicas</label> <label><input type="checkbox"> Diabetes Mellitus</label> <label><input type="checkbox"> Hipoglucemiantes</label> <label><input type="checkbox"> Enf. dermatológicas</label> <label><input type="checkbox"> Circulación</label> <label><input type="checkbox"> Presión Arterial</label> <label><input type="checkbox"> Traumatismo</label> <label><input type="checkbox"> Inmunológicas</label> <label><input type="checkbox"> Cardiopatías</label> <label><input type="checkbox"> Enf. Renal</label> <label><input type="checkbox"> VIH</label> <label><input type="checkbox"> Cáncer</label> <label><input type="checkbox"> Embarazo</label> <label><input type="checkbox"> Lactando</label> <label><input type="checkbox"> Aspirina</label> <label><input type="checkbox"> Varices</label> <label><input type="checkbox"> Alergias</label> <label><input type="checkbox"> Artritis</label> <label><input type="checkbox"> Gota</label> <label><input type="checkbox"> Analgésico</label> </div> <label>Otras<textarea rows="2"></textarea></label> </div> <div class="section"> <h2>Exploración Física Visual</h2> <table style='width:100%; border-collapse:collapse;'> <tr><th>Padecimiento</th><th>Izq.</th><th>Der.</th><th>Padecimiento</th><th>Izq.</th><th>Der.</th></tr> <tr><td>Pálidez</td><td><input type='checkbox'></td><td><input type='checkbox'></td><td>Leuconiquia</td><td><input type='checkbox'></td><td><input type='checkbox'></td></tr> <tr><td>Eritema</td><td><input type='checkbox'></td><td><input type='checkbox'></td><td>Melanoniquia</td><td><input type='checkbox'></td><td><input type='checkbox'></td></tr> <tr><td>Hematoma</td><td><input type='checkbox'></td><td><input type='checkbox'></td><td>Oniaquia</td><td><input type='checkbox'></td><td><input type='checkbox'></td></tr> <tr><td>Dermatitis</td><td><input type='checkbox'></td><td><input type='checkbox'></td><td>Coiloniquia</td><td><input type='checkbox'></td><td><input type='checkbox'></td></tr> <tr><td>Alteraciones óseas</td><td><input type='checkbox'></td><td><input type='checkbox'></td><td>Onicogrifosis</td><td><input type='checkbox'></td><td><input type='checkbox'></td></tr> <tr><td>Polidactilia</td><td><input type='checkbox'></td><td><input type='checkbox'></td><td>Uña de dedal</td><td><input type='checkbox'></td><td><input type='checkbox'></td></tr> <tr><td>Sindactilia</td><td><input type='checkbox'></td><td><input type='checkbox'></td><td>Uña de mitad y mitad</td><td><input type='checkbox'></td><td><input type='checkbox'></td></tr> <tr><td>Hiperqueratosis</td><td><input type='checkbox'></td><td><input type='checkbox'></td><td>Hojas hipocráticas</td><td><input type='checkbox'></td><td><input type='checkbox'></td></tr> <tr><td>Onicomicosis</td><td><input type='checkbox'></td><td><input type='checkbox'></td><td>Micosis plantar</td><td><input type='checkbox'></td><td><input type='checkbox'></td></tr> <tr><td>Onicogrifosis</td><td><input type='checkbox'></td><td><input type='checkbox'></td><td>Micosis interdigital</td><td><input type='checkbox'></td><td><input type='checkbox'></td></tr> <tr><td>Descamación</td><td><input type='checkbox'></td><td><input type='checkbox'></td><td>Úlceras</td><td><input type='checkbox'></td><td><input type='checkbox'></td></tr> <tr><td>Heloma</td><td><input type='checkbox'></td><td><input type='checkbox'></td><td>Tatuajes</td><td><input type='checkbox'></td><td><input type='checkbox'></td></tr> <tr><td>Hallux Valgus</td><td><input type='checkbox'></td><td><input type='checkbox'></td><td>Onicocriptosis</td><td><input type='checkbox'></td><td><input type='checkbox'></td></tr> <tr><td>Onicolisis</td><td><input type='checkbox'></td><td><input type='checkbox'></td><td>Paroniquia</td><td><input type='checkbox'></td><td><input type='checkbox'></td></tr> <tr><td>Onicomadesis</td><td><input type='checkbox'></td><td><input type='checkbox'></td><td>Onicodistrofia</td><td><input type='checkbox'></td><td><input type='checkbox'></td></tr> <tr><td>Juanete Sastre</td><td><input type='checkbox'></td><td><input type='checkbox'></td><td></td><td></td><td></td></tr> </table> <h2>Exploración Física Manual e Instrumentada</h2> <table style='width:100%; border-collapse:collapse;'> <tr><th></th><th colspan='2'>Pie Izquierdo</th><th colspan='2'>Pie Derecho</th></tr> <tr><th>Prueba</th><th>Normal</th><th>Anormal</th><th>Normal</th><th>Anormal</th></tr> <tr><td>Estructura ósea</td><td><input type='checkbox'></td><td><input type='checkbox'></td><td><input type='checkbox'></td><td><input type='checkbox'></td></tr> <tr><td>Temperatura</td><td><input type='checkbox'></td><td><input type='checkbox'></td><td><input type='checkbox'></td><td><input type='checkbox'></td></tr> <tr><td>Llenado capilar</td><td><input type='checkbox'></td><td><input type='checkbox'></td><td><input type='checkbox'></td><td><input type='checkbox'></td></tr> <tr><td>Pulso pedio</td><td><input type='checkbox'></td><td><input type='checkbox'></td><td><input type='checkbox'></td><td><input type='checkbox'></td></tr> <tr><td>Pulso tibial posterior</td><td><input type='checkbox'></td><td><input type='checkbox'></td><td><input type='checkbox'></td><td><input type='checkbox'></td></tr> <tr><td>Sensibilidad al monofilamento</td><td><input type='checkbox'></td><td><input type='checkbox'></td><td><input type='checkbox'></td><td><input type='checkbox'></td></tr> <tr><td>Reflejo rotuliano</td><td><input type='checkbox'></td><td><input type='checkbox'></td><td><input type='checkbox'></td><td><input type='checkbox'></td></tr> <tr><td>Reflejo aquíleo</td><td><input type='checkbox'></td><td><input type='checkbox'></td><td><input type='checkbox'></td><td><input type='checkbox'></td></tr> <tr><td>Diapasón</td><td><input type='checkbox'></td><td><input type='checkbox'></td><td><input type='checkbox'></td><td><input type='checkbox'></td></tr> </table> <h2>Diagnóstico</h2> <textarea rows='3'></textarea> <h2>Terapéutica</h2> <textarea rows='3'></textarea> <h2>Tratamiento</h2> <textarea rows='3'></textarea> <p>Nombre y firma del paciente: ______________________________</p> <p>Nombre y firma del podólogo: ______________________________</p> </div> </form> </body> </html>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Historia Clínica Podológica</title>
+  <style>
+    :root {
+      --borde: #d0d7de;
+      --titulo: #111827;
+      --texto: #1f2937;
+      --suave: #6b7280;
+      --fondo: #f9fafb;
+      --accion: #2563eb;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 1.5rem;
+      font-family: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+      background-color: var(--fondo);
+      color: var(--texto);
+      line-height: 1.6;
+    }
+
+    a {
+      color: var(--accion);
+    }
+
+    .skip-link {
+      position: absolute;
+      top: 0.5rem;
+      left: -999px;
+      background: var(--accion);
+      color: #fff;
+      padding: 0.5rem 0.75rem;
+      border-radius: 0.5rem;
+      text-decoration: none;
+    }
+
+    .skip-link:focus {
+      left: 1rem;
+    }
+
+    h1 {
+      margin: 0 0 0.75rem;
+      color: var(--titulo);
+    }
+
+    h2 {
+      margin: 0 0 1rem;
+      color: var(--titulo);
+      font-size: 1.1rem;
+    }
+
+    form {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: grid;
+      gap: 1.5rem;
+    }
+
+    section {
+      background: #fff;
+      border: 1px solid var(--borde);
+      border-radius: 0.75rem;
+      padding: 1.25rem;
+      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.03);
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1rem 1.25rem;
+    }
+
+    .field {
+      display: flex;
+      flex-direction: column;
+      gap: 0.35rem;
+    }
+
+    label {
+      font-weight: 600;
+      color: var(--titulo);
+    }
+
+    input,
+    select,
+    textarea {
+      width: 100%;
+      padding: 0.65rem 0.75rem;
+      border: 1px solid var(--borde);
+      border-radius: 0.5rem;
+      font-size: 1rem;
+      background-color: #fff;
+    }
+
+    textarea {
+      min-height: 90px;
+      resize: vertical;
+    }
+
+    input:focus-visible,
+    select:focus-visible,
+    textarea:focus-visible,
+    button:focus-visible,
+    a:focus-visible {
+      outline: 3px solid var(--accion);
+      outline-offset: 2px;
+    }
+
+    fieldset {
+      border: 1px solid var(--borde);
+      border-radius: 0.75rem;
+      padding: 1rem;
+      margin: 0;
+    }
+
+    legend {
+      font-weight: 700;
+      color: var(--titulo);
+      padding: 0 0.35rem;
+    }
+
+    .checkbox-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 0.5rem 1rem;
+      margin-top: 0.75rem;
+    }
+
+    .checkbox-item {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .checkbox-item input {
+      width: auto;
+      margin: 0;
+    }
+
+    .hint {
+      margin: 0;
+      color: var(--suave);
+      font-size: 0.95rem;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 0.75rem;
+    }
+
+    th,
+    td {
+      border: 1px solid var(--borde);
+      padding: 0.5rem;
+      text-align: center;
+    }
+
+    th {
+      background-color: #f3f4f6;
+      font-weight: 700;
+    }
+
+    td:first-child,
+    th[scope="row"] {
+      text-align: left;
+    }
+
+    .signature {
+      margin-top: 0.25rem;
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#contenido-principal">Saltar al formulario</a>
+  <header>
+    <h1>Historia Clínica Podológica</h1>
+    <p class="hint">Complete cada campo con la información del paciente. Use los selectores adecuados y añada detalles breves donde se solicite.</p>
+  </header>
+
+  <main id="contenido-principal">
+    <form action="#" method="post">
+      <section aria-labelledby="datos-generales-titulo">
+        <h2 id="datos-generales-titulo">Datos Generales</h2>
+        <div class="grid">
+          <div class="field">
+            <label for="nombre">Nombre</label>
+            <input type="text" id="nombre" name="nombre" autocomplete="name" required>
+          </div>
+          <div class="field">
+            <label for="sexo">Sexo</label>
+            <select id="sexo" name="sexo">
+              <option value="">Seleccione...</option>
+              <option value="femenino">Femenino</option>
+              <option value="masculino">Masculino</option>
+              <option value="otro">Otro / Prefiere no decir</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="edad">Edad</label>
+            <input type="number" id="edad" name="edad" min="0" max="120" step="1" inputmode="numeric">
+          </div>
+          <div class="field">
+            <label for="peso">Peso (kg)</label>
+            <input type="number" id="peso" name="peso" min="0" step="0.1" inputmode="decimal">
+          </div>
+          <div class="field">
+            <label for="estatura">Estatura (m)</label>
+            <input type="number" id="estatura" name="estatura" min="0" step="0.01" inputmode="decimal">
+          </div>
+          <div class="field">
+            <label for="numero-calzado">No. Calzado</label>
+            <input type="number" id="numero-calzado" name="numero_calzado" min="10" max="50" step="0.5" inputmode="decimal">
+          </div>
+          <div class="field">
+            <label for="ocupacion-actual">Ocupación Actual</label>
+            <input type="text" id="ocupacion-actual" name="ocupacion_actual" autocomplete="organization-title">
+          </div>
+          <div class="field">
+            <label for="ocupacion-anterior">Ocupación Anterior</label>
+            <input type="text" id="ocupacion-anterior" name="ocupacion_anterior">
+          </div>
+          <div class="field">
+            <label for="domicilio">Domicilio</label>
+            <input type="text" id="domicilio" name="domicilio" autocomplete="street-address">
+          </div>
+          <div class="field">
+            <label for="telefono">Teléfono</label>
+            <input type="tel" id="telefono" name="telefono" pattern="\d{10}" inputmode="tel" aria-describedby="telefono-ayuda">
+            <p class="hint" id="telefono-ayuda">10 dígitos continuos.</p>
+          </div>
+          <div class="field">
+            <label for="celular">Cel</label>
+            <input type="tel" id="celular" name="celular" pattern="\d{10}" inputmode="tel" aria-describedby="celular-ayuda">
+            <p class="hint" id="celular-ayuda">10 dígitos continuos.</p>
+          </div>
+          <div class="field">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" autocomplete="email">
+          </div>
+        </div>
+      </section>
+
+      <section aria-labelledby="motivo-consulta-titulo">
+        <h2 id="motivo-consulta-titulo">Motivo de la Consulta</h2>
+        <div class="field">
+          <label for="motivo-consulta">Describa brevemente el motivo principal</label>
+          <textarea id="motivo-consulta" name="motivo_consulta" rows="3"></textarea>
+        </div>
+      </section>
+
+      <section aria-labelledby="padecimiento-actual-titulo">
+        <h2 id="padecimiento-actual-titulo">Padecimiento Actual</h2>
+        <div class="grid">
+          <div class="field">
+            <label for="fecha-primer-sintoma">Fecha del 1er síntoma</label>
+            <input type="date" id="fecha-primer-sintoma" name="fecha_primer_sintoma">
+          </div>
+          <div class="field">
+            <label for="localizacion">Localización</label>
+            <input type="text" id="localizacion" name="localizacion">
+          </div>
+          <div class="field">
+            <label for="frecuencia">Frecuencia</label>
+            <select id="frecuencia" name="frecuencia">
+              <option value="">Seleccione...</option>
+              <option value="dia">Día</option>
+              <option value="noche">Noche</option>
+              <option value="intermitente">Intermitente</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="tipo-dolor">Tipo de dolor</label>
+            <input type="text" id="tipo-dolor" name="tipo_dolor">
+          </div>
+          <div class="field">
+            <label for="como-inicio">Cómo inició</label>
+            <textarea id="como-inicio" name="como_inicio" rows="2" placeholder="Ejemplo: después de un golpe, uso de calzado apretado..."></textarea>
+          </div>
+          <div class="field">
+            <label for="circunstancia">Circunstancia desencadenante o que lo modifica</label>
+            <textarea id="circunstancia" name="circunstancia" rows="2" placeholder="Ejemplo: caminata larga, actividad laboral, reposo..."></textarea>
+          </div>
+        </div>
+      </section>
+
+      <section aria-labelledby="antecedentes-familiares-titulo">
+        <h2 id="antecedentes-familiares-titulo">Antecedentes Familiares</h2>
+        <fieldset>
+          <legend>Seleccione los antecedentes conocidos</legend>
+          <div class="checkbox-grid">
+            <label class="checkbox-item" for="af-alergias"><input type="checkbox" id="af-alergias" name="af_alergias" value="si">Alergias</label>
+            <label class="checkbox-item" for="af-hemofilia"><input type="checkbox" id="af-hemofilia" name="af_hemofilia" value="si">Hemofilia</label>
+            <label class="checkbox-item" for="af-hallux-valgus"><input type="checkbox" id="af-hallux-valgus" name="af_hallux_valgus" value="si">Hallux Valgus</label>
+            <label class="checkbox-item" for="af-cardiopatias"><input type="checkbox" id="af-cardiopatias" name="af_cardiopatias" value="si">Cardiopatías</label>
+            <label class="checkbox-item" for="af-inmunodeficiencia"><input type="checkbox" id="af-inmunodeficiencia" name="af_inmunodeficiencia" value="si">Inmunodeficiencia</label>
+            <label class="checkbox-item" for="af-hipoglucemia"><input type="checkbox" id="af-hipoglucemia" name="af_hipoglucemia" value="si">Hipoglucemia</label>
+            <label class="checkbox-item" for="af-juanete-sastre"><input type="checkbox" id="af-juanete-sastre" name="af_juanete_sastre" value="si">Juanete Sastre</label>
+            <label class="checkbox-item" for="af-artritis"><input type="checkbox" id="af-artritis" name="af_artritis" value="si">Artritis</label>
+            <label class="checkbox-item" for="af-diabetes"><input type="checkbox" id="af-diabetes" name="af_diabetes_mellitus" value="si">Diabetes Mellitus</label>
+            <label class="checkbox-item" for="af-hipertension"><input type="checkbox" id="af-hipertension" name="af_hipertension" value="si">Hipertensión</label>
+            <label class="checkbox-item" for="af-gota"><input type="checkbox" id="af-gota" name="af_gota" value="si">Gota</label>
+            <label class="checkbox-item" for="af-pie-plano"><input type="checkbox" id="af-pie-plano" name="af_pie_plano" value="si">Pie Plano</label>
+            <label class="checkbox-item" for="af-anemia"><input type="checkbox" id="af-anemia" name="af_anemia" value="si">Anemia</label>
+          </div>
+        </fieldset>
+      </section>
+
+      <section aria-labelledby="antecedentes-no-patologicos-titulo">
+        <h2 id="antecedentes-no-patologicos-titulo">Antecedentes Personales No Patológicos</h2>
+        <div class="grid">
+          <div class="field">
+            <label for="fuma">Fuma</label>
+            <select id="fuma" name="fuma">
+              <option value="">Seleccione...</option>
+              <option value="si">Sí</option>
+              <option value="no">No</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="alcohol">Consume bebidas alcohólicas</label>
+            <select id="alcohol" name="alcohol">
+              <option value="">Seleccione...</option>
+              <option value="si">Sí</option>
+              <option value="no">No</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="medicamentos">Medicamentos y/o drogas</label>
+            <select id="medicamentos" name="medicamentos_drogas">
+              <option value="">Seleccione...</option>
+              <option value="si">Sí</option>
+              <option value="no">No</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="actividad-fisica">Realiza actividad física</label>
+            <select id="actividad-fisica" name="actividad_fisica">
+              <option value="">Seleccione...</option>
+              <option value="si">Sí</option>
+              <option value="no">No</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="actividad-cual">¿Cuál?</label>
+            <input type="text" id="actividad-cual" name="actividad_cual">
+          </div>
+          <div class="field">
+            <label for="actividad-frecuencia">Frecuencia</label>
+            <input type="text" id="actividad-frecuencia" name="actividad_frecuencia">
+          </div>
+          <div class="field">
+            <label for="comparte-calzado">Comparte calzado</label>
+            <select id="comparte-calzado" name="comparte_calzado">
+              <option value="">Seleccione...</option>
+              <option value="si">Sí</option>
+              <option value="no">No</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="lugares-publicos">Frecuenta lugares públicos descalzo</label>
+            <select id="lugares-publicos" name="lugares_publicos_descalzo">
+              <option value="">Seleccione...</option>
+              <option value="si">Sí</option>
+              <option value="no">No</option>
+            </select>
+          </div>
+        </div>
+      </section>
+
+      <section aria-labelledby="antecedentes-patologicos-titulo">
+        <h2 id="antecedentes-patologicos-titulo">Antecedentes Personales Patológicos</h2>
+        <fieldset>
+          <legend>Seleccione las condiciones conocidas</legend>
+          <div class="checkbox-grid">
+            <label class="checkbox-item" for="app-cirugias-ortopedicas"><input type="checkbox" id="app-cirugias-ortopedicas" name="app_cirugias_ortopedicas" value="si">Cirugías Ortopédicas</label>
+            <label class="checkbox-item" for="app-diabetes"><input type="checkbox" id="app-diabetes" name="app_diabetes_mellitus" value="si">Diabetes Mellitus</label>
+            <label class="checkbox-item" for="app-hipoglucemiantes"><input type="checkbox" id="app-hipoglucemiantes" name="app_hipoglucemiantes" value="si">Hipoglucemiantes</label>
+            <label class="checkbox-item" for="app-dermatologicas"><input type="checkbox" id="app-dermatologicas" name="app_dermatologicas" value="si">Enf. dermatológicas</label>
+            <label class="checkbox-item" for="app-circulacion"><input type="checkbox" id="app-circulacion" name="app_circulacion" value="si">Circulación</label>
+            <label class="checkbox-item" for="app-presion-arterial"><input type="checkbox" id="app-presion-arterial" name="app_presion_arterial" value="si">Presión Arterial</label>
+            <label class="checkbox-item" for="app-traumatismo"><input type="checkbox" id="app-traumatismo" name="app_traumatismo" value="si">Traumatismo</label>
+            <label class="checkbox-item" for="app-inmunologicas"><input type="checkbox" id="app-inmunologicas" name="app_inmunologicas" value="si">Inmunológicas</label>
+            <label class="checkbox-item" for="app-cardiopatias"><input type="checkbox" id="app-cardiopatias" name="app_cardiopatias" value="si">Cardiopatías</label>
+            <label class="checkbox-item" for="app-renal"><input type="checkbox" id="app-renal" name="app_enfermedad_renal" value="si">Enf. Renal</label>
+            <label class="checkbox-item" for="app-vih"><input type="checkbox" id="app-vih" name="app_vih" value="si">VIH</label>
+            <label class="checkbox-item" for="app-cancer"><input type="checkbox" id="app-cancer" name="app_cancer" value="si">Cáncer</label>
+            <label class="checkbox-item" for="app-embarazo"><input type="checkbox" id="app-embarazo" name="app_embarazo" value="si">Embarazo</label>
+            <label class="checkbox-item" for="app-lactando"><input type="checkbox" id="app-lactando" name="app_lactando" value="si">Lactando</label>
+            <label class="checkbox-item" for="app-aspirina"><input type="checkbox" id="app-aspirina" name="app_aspirina" value="si">Aspirina</label>
+            <label class="checkbox-item" for="app-varices"><input type="checkbox" id="app-varices" name="app_varices" value="si">Varices</label>
+            <label class="checkbox-item" for="app-alergias"><input type="checkbox" id="app-alergias" name="app_alergias" value="si">Alergias</label>
+            <label class="checkbox-item" for="app-artritis"><input type="checkbox" id="app-artritis" name="app_artritis" value="si">Artritis</label>
+            <label class="checkbox-item" for="app-gota"><input type="checkbox" id="app-gota" name="app_gota" value="si">Gota</label>
+            <label class="checkbox-item" for="app-analgesico"><input type="checkbox" id="app-analgesico" name="app_analgesico" value="si">Analgésico</label>
+          </div>
+          <div class="field" style="margin-top: 1rem;">
+            <label for="app-otras">Otras</label>
+            <textarea id="app-otras" name="app_otras" rows="2"></textarea>
+          </div>
+        </fieldset>
+      </section>
+
+      <section aria-labelledby="exploracion-visual-titulo">
+        <h2 id="exploracion-visual-titulo">Exploración Física Visual</h2>
+        <table aria-describedby="exploracion-visual-ayuda">
+          <caption class="hint" id="exploracion-visual-ayuda">Seleccione la presencia del hallazgo en pie izquierdo o derecho.</caption>
+          <thead>
+            <tr>
+              <th scope="col">Padecimiento</th>
+              <th scope="col" id="lado-izquierdo">Izq.</th>
+              <th scope="col" id="lado-derecho">Der.</th>
+              <th scope="col">Padecimiento</th>
+              <th scope="col" id="lado-izquierdo-2">Izq.</th>
+              <th scope="col" id="lado-derecho-2">Der.</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row" id="palidez-label">Pálidez</th>
+              <td><input type="checkbox" id="palidez-izq" name="palidez_izq" value="si" aria-labelledby="palidez-label lado-izquierdo"></td>
+              <td><input type="checkbox" id="palidez-der" name="palidez_der" value="si" aria-labelledby="palidez-label lado-derecho"></td>
+              <th scope="row" id="leuconiquia-label">Leuconiquia</th>
+              <td><input type="checkbox" id="leuconiquia-izq" name="leuconiquia_izq" value="si" aria-labelledby="leuconiquia-label lado-izquierdo-2"></td>
+              <td><input type="checkbox" id="leuconiquia-der" name="leuconiquia_der" value="si" aria-labelledby="leuconiquia-label lado-derecho-2"></td>
+            </tr>
+            <tr>
+              <th scope="row" id="eritema-label">Eritema</th>
+              <td><input type="checkbox" id="eritema-izq" name="eritema_izq" value="si" aria-labelledby="eritema-label lado-izquierdo"></td>
+              <td><input type="checkbox" id="eritema-der" name="eritema_der" value="si" aria-labelledby="eritema-label lado-derecho"></td>
+              <th scope="row" id="melanoniquia-label">Melanoniquia</th>
+              <td><input type="checkbox" id="melanoniquia-izq" name="melanoniquia_izq" value="si" aria-labelledby="melanoniquia-label lado-izquierdo-2"></td>
+              <td><input type="checkbox" id="melanoniquia-der" name="melanoniquia_der" value="si" aria-labelledby="melanoniquia-label lado-derecho-2"></td>
+            </tr>
+            <tr>
+              <th scope="row" id="hematoma-label">Hematoma</th>
+              <td><input type="checkbox" id="hematoma-izq" name="hematoma_izq" value="si" aria-labelledby="hematoma-label lado-izquierdo"></td>
+              <td><input type="checkbox" id="hematoma-der" name="hematoma_der" value="si" aria-labelledby="hematoma-label lado-derecho"></td>
+              <th scope="row" id="oniaquia-label">Oniaquia</th>
+              <td><input type="checkbox" id="oniaquia-izq" name="oniaquia_izq" value="si" aria-labelledby="oniaquia-label lado-izquierdo-2"></td>
+              <td><input type="checkbox" id="oniaquia-der" name="oniaquia_der" value="si" aria-labelledby="oniaquia-label lado-derecho-2"></td>
+            </tr>
+            <tr>
+              <th scope="row" id="dermatitis-label">Dermatitis</th>
+              <td><input type="checkbox" id="dermatitis-izq" name="dermatitis_izq" value="si" aria-labelledby="dermatitis-label lado-izquierdo"></td>
+              <td><input type="checkbox" id="dermatitis-der" name="dermatitis_der" value="si" aria-labelledby="dermatitis-label lado-derecho"></td>
+              <th scope="row" id="coiloniquia-label">Coiloniquia</th>
+              <td><input type="checkbox" id="coiloniquia-izq" name="coiloniquia_izq" value="si" aria-labelledby="coiloniquia-label lado-izquierdo-2"></td>
+              <td><input type="checkbox" id="coiloniquia-der" name="coiloniquia_der" value="si" aria-labelledby="coiloniquia-label lado-derecho-2"></td>
+            </tr>
+            <tr>
+              <th scope="row" id="alteraciones-oseas-label">Alteraciones óseas</th>
+              <td><input type="checkbox" id="alteraciones-oseas-izq" name="alteraciones_oseas_izq" value="si" aria-labelledby="alteraciones-oseas-label lado-izquierdo"></td>
+              <td><input type="checkbox" id="alteraciones-oseas-der" name="alteraciones_oseas_der" value="si" aria-labelledby="alteraciones-oseas-label lado-derecho"></td>
+              <th scope="row" id="onicogrifosis-label">Onicogrifosis</th>
+              <td><input type="checkbox" id="onicogrifosis-izq" name="onicogrifosis_izq" value="si" aria-labelledby="onicogrifosis-label lado-izquierdo-2"></td>
+              <td><input type="checkbox" id="onicogrifosis-der" name="onicogrifosis_der" value="si" aria-labelledby="onicogrifosis-label lado-derecho-2"></td>
+            </tr>
+            <tr>
+              <th scope="row" id="polidactilia-label">Polidactilia</th>
+              <td><input type="checkbox" id="polidactilia-izq" name="polidactilia_izq" value="si" aria-labelledby="polidactilia-label lado-izquierdo"></td>
+              <td><input type="checkbox" id="polidactilia-der" name="polidactilia_der" value="si" aria-labelledby="polidactilia-label lado-derecho"></td>
+              <th scope="row" id="dedal-label">Uña de dedal</th>
+              <td><input type="checkbox" id="dedal-izq" name="una_dedal_izq" value="si" aria-labelledby="dedal-label lado-izquierdo-2"></td>
+              <td><input type="checkbox" id="dedal-der" name="una_dedal_der" value="si" aria-labelledby="dedal-label lado-derecho-2"></td>
+            </tr>
+            <tr>
+              <th scope="row" id="sindactilia-label">Sindactilia</th>
+              <td><input type="checkbox" id="sindactilia-izq" name="sindactilia_izq" value="si" aria-labelledby="sindactilia-label lado-izquierdo"></td>
+              <td><input type="checkbox" id="sindactilia-der" name="sindactilia_der" value="si" aria-labelledby="sindactilia-label lado-derecho"></td>
+              <th scope="row" id="mitad-label">Uña de mitad y mitad</th>
+              <td><input type="checkbox" id="mitad-izq" name="una_mitad_izq" value="si" aria-labelledby="mitad-label lado-izquierdo-2"></td>
+              <td><input type="checkbox" id="mitad-der" name="una_mitad_der" value="si" aria-labelledby="mitad-label lado-derecho-2"></td>
+            </tr>
+            <tr>
+              <th scope="row" id="hiperqueratosis-label">Hiperqueratosis</th>
+              <td><input type="checkbox" id="hiperqueratosis-izq" name="hiperqueratosis_izq" value="si" aria-labelledby="hiperqueratosis-label lado-izquierdo"></td>
+              <td><input type="checkbox" id="hiperqueratosis-der" name="hiperqueratosis_der" value="si" aria-labelledby="hiperqueratosis-label lado-derecho"></td>
+              <th scope="row" id="hojas-label">Hojas hipocráticas</th>
+              <td><input type="checkbox" id="hojas-izq" name="hojas_hipocraticas_izq" value="si" aria-labelledby="hojas-label lado-izquierdo-2"></td>
+              <td><input type="checkbox" id="hojas-der" name="hojas_hipocraticas_der" value="si" aria-labelledby="hojas-label lado-derecho-2"></td>
+            </tr>
+            <tr>
+              <th scope="row" id="onicomicosis-label">Onicomicosis</th>
+              <td><input type="checkbox" id="onicomicosis-izq" name="onicomicosis_izq" value="si" aria-labelledby="onicomicosis-label lado-izquierdo"></td>
+              <td><input type="checkbox" id="onicomicosis-der" name="onicomicosis_der" value="si" aria-labelledby="onicomicosis-label lado-derecho"></td>
+              <th scope="row" id="micosis-plantar-label">Micosis plantar</th>
+              <td><input type="checkbox" id="micosis-plantar-izq" name="micosis_plantar_izq" value="si" aria-labelledby="micosis-plantar-label lado-izquierdo-2"></td>
+              <td><input type="checkbox" id="micosis-plantar-der" name="micosis_plantar_der" value="si" aria-labelledby="micosis-plantar-label lado-derecho-2"></td>
+            </tr>
+            <tr>
+              <th scope="row" id="descamacion-label">Descamación</th>
+              <td><input type="checkbox" id="descamacion-izq" name="descamacion_izq" value="si" aria-labelledby="descamacion-label lado-izquierdo"></td>
+              <td><input type="checkbox" id="descamacion-der" name="descamacion_der" value="si" aria-labelledby="descamacion-label lado-derecho"></td>
+              <th scope="row" id="micosis-interdigital-label">Micosis interdigital</th>
+              <td><input type="checkbox" id="micosis-interdigital-izq" name="micosis_interdigital_izq" value="si" aria-labelledby="micosis-interdigital-label lado-izquierdo-2"></td>
+              <td><input type="checkbox" id="micosis-interdigital-der" name="micosis_interdigital_der" value="si" aria-labelledby="micosis-interdigital-label lado-derecho-2"></td>
+            </tr>
+            <tr>
+              <th scope="row" id="heloma-label">Heloma</th>
+              <td><input type="checkbox" id="heloma-izq" name="heloma_izq" value="si" aria-labelledby="heloma-label lado-izquierdo"></td>
+              <td><input type="checkbox" id="heloma-der" name="heloma_der" value="si" aria-labelledby="heloma-label lado-derecho"></td>
+              <th scope="row" id="ulceras-label">Úlceras</th>
+              <td><input type="checkbox" id="ulceras-izq" name="ulceras_izq" value="si" aria-labelledby="ulceras-label lado-izquierdo-2"></td>
+              <td><input type="checkbox" id="ulceras-der" name="ulceras_der" value="si" aria-labelledby="ulceras-label lado-derecho-2"></td>
+            </tr>
+            <tr>
+              <th scope="row" id="hallux-valgus-label">Hallux Valgus</th>
+              <td><input type="checkbox" id="hallux-valgus-izq" name="hallux_valgus_izq" value="si" aria-labelledby="hallux-valgus-label lado-izquierdo"></td>
+              <td><input type="checkbox" id="hallux-valgus-der" name="hallux_valgus_der" value="si" aria-labelledby="hallux-valgus-label lado-derecho"></td>
+              <th scope="row" id="tatuajes-label">Tatuajes</th>
+              <td><input type="checkbox" id="tatuajes-izq" name="tatuajes_izq" value="si" aria-labelledby="tatuajes-label lado-izquierdo-2"></td>
+              <td><input type="checkbox" id="tatuajes-der" name="tatuajes_der" value="si" aria-labelledby="tatuajes-label lado-derecho-2"></td>
+            </tr>
+            <tr>
+              <th scope="row" id="onicolisis-label">Onicolisis</th>
+              <td><input type="checkbox" id="onicolisis-izq" name="onicolisis_izq" value="si" aria-labelledby="onicolisis-label lado-izquierdo"></td>
+              <td><input type="checkbox" id="onicolisis-der" name="onicolisis_der" value="si" aria-labelledby="onicolisis-label lado-derecho"></td>
+              <th scope="row" id="onicocriptosis-label">Onicocriptosis</th>
+              <td><input type="checkbox" id="onicocriptosis-izq" name="onicocriptosis_izq" value="si" aria-labelledby="onicocriptosis-label lado-izquierdo-2"></td>
+              <td><input type="checkbox" id="onicocriptosis-der" name="onicocriptosis_der" value="si" aria-labelledby="onicocriptosis-label lado-derecho-2"></td>
+            </tr>
+            <tr>
+              <th scope="row" id="onicomadesis-label">Onicomadesis</th>
+              <td><input type="checkbox" id="onicomadesis-izq" name="onicomadesis_izq" value="si" aria-labelledby="onicomadesis-label lado-izquierdo"></td>
+              <td><input type="checkbox" id="onicomadesis-der" name="onicomadesis_der" value="si" aria-labelledby="onicomadesis-label lado-derecho"></td>
+              <th scope="row" id="paroniquia-label">Paroniquia</th>
+              <td><input type="checkbox" id="paroniquia-izq" name="paroniquia_izq" value="si" aria-labelledby="paroniquia-label lado-izquierdo-2"></td>
+              <td><input type="checkbox" id="paroniquia-der" name="paroniquia_der" value="si" aria-labelledby="paroniquia-label lado-derecho-2"></td>
+            </tr>
+            <tr>
+              <th scope="row" id="juanete-sastre-label">Juanete Sastre</th>
+              <td><input type="checkbox" id="juanete-sastre-izq" name="juanete_sastre_izq" value="si" aria-labelledby="juanete-sastre-label lado-izquierdo"></td>
+              <td><input type="checkbox" id="juanete-sastre-der" name="juanete_sastre_der" value="si" aria-labelledby="juanete-sastre-label lado-derecho"></td>
+              <th scope="row" id="onicodistrofia-label">Onicodistrofia</th>
+              <td><input type="checkbox" id="onicodistrofia-izq" name="onicodistrofia_izq" value="si" aria-labelledby="onicodistrofia-label lado-izquierdo-2"></td>
+              <td><input type="checkbox" id="onicodistrofia-der" name="onicodistrofia_der" value="si" aria-labelledby="onicodistrofia-label lado-derecho-2"></td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section aria-labelledby="exploracion-manual-titulo">
+        <h2 id="exploracion-manual-titulo">Exploración Física Manual e Instrumentada</h2>
+        <table aria-describedby="exploracion-manual-ayuda">
+          <caption class="hint" id="exploracion-manual-ayuda">Seleccione normal o anormal para cada pie.</caption>
+          <thead>
+            <tr>
+              <th scope="col">Prueba</th>
+              <th scope="col" colspan="2">Pie Izquierdo</th>
+              <th scope="col" colspan="2">Pie Derecho</th>
+            </tr>
+            <tr>
+              <th scope="col"></th>
+              <th scope="col" id="izq-normal">Normal</th>
+              <th scope="col" id="izq-anormal">Anormal</th>
+              <th scope="col" id="der-normal">Normal</th>
+              <th scope="col" id="der-anormal">Anormal</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row" id="estructura-osea">Estructura ósea</th>
+              <td><input type="checkbox" id="estructura-osea-izq-normal" name="estructura_osea_izq_normal" value="si" aria-labelledby="estructura-osea izq-normal"></td>
+              <td><input type="checkbox" id="estructura-osea-izq-anormal" name="estructura_osea_izq_anormal" value="si" aria-labelledby="estructura-osea izq-anormal"></td>
+              <td><input type="checkbox" id="estructura-osea-der-normal" name="estructura_osea_der_normal" value="si" aria-labelledby="estructura-osea der-normal"></td>
+              <td><input type="checkbox" id="estructura-osea-der-anormal" name="estructura_osea_der_anormal" value="si" aria-labelledby="estructura-osea der-anormal"></td>
+            </tr>
+            <tr>
+              <th scope="row" id="temperatura">Temperatura</th>
+              <td><input type="checkbox" id="temperatura-izq-normal" name="temperatura_izq_normal" value="si" aria-labelledby="temperatura izq-normal"></td>
+              <td><input type="checkbox" id="temperatura-izq-anormal" name="temperatura_izq_anormal" value="si" aria-labelledby="temperatura izq-anormal"></td>
+              <td><input type="checkbox" id="temperatura-der-normal" name="temperatura_der_normal" value="si" aria-labelledby="temperatura der-normal"></td>
+              <td><input type="checkbox" id="temperatura-der-anormal" name="temperatura_der_anormal" value="si" aria-labelledby="temperatura der-anormal"></td>
+            </tr>
+            <tr>
+              <th scope="row" id="llenado-capilar">Llenado capilar</th>
+              <td><input type="checkbox" id="llenado-izq-normal" name="llenado_capilar_izq_normal" value="si" aria-labelledby="llenado-capilar izq-normal"></td>
+              <td><input type="checkbox" id="llenado-izq-anormal" name="llenado_capilar_izq_anormal" value="si" aria-labelledby="llenado-capilar izq-anormal"></td>
+              <td><input type="checkbox" id="llenado-der-normal" name="llenado_capilar_der_normal" value="si" aria-labelledby="llenado-capilar der-normal"></td>
+              <td><input type="checkbox" id="llenado-der-anormal" name="llenado_capilar_der_anormal" value="si" aria-labelledby="llenado-capilar der-anormal"></td>
+            </tr>
+            <tr>
+              <th scope="row" id="pulso-pedio">Pulso pedio</th>
+              <td><input type="checkbox" id="pulso-pedio-izq-normal" name="pulso_pedio_izq_normal" value="si" aria-labelledby="pulso-pedio izq-normal"></td>
+              <td><input type="checkbox" id="pulso-pedio-izq-anormal" name="pulso_pedio_izq_anormal" value="si" aria-labelledby="pulso-pedio izq-anormal"></td>
+              <td><input type="checkbox" id="pulso-pedio-der-normal" name="pulso_pedio_der_normal" value="si" aria-labelledby="pulso-pedio der-normal"></td>
+              <td><input type="checkbox" id="pulso-pedio-der-anormal" name="pulso_pedio_der_anormal" value="si" aria-labelledby="pulso-pedio der-anormal"></td>
+            </tr>
+            <tr>
+              <th scope="row" id="pulso-tibial">Pulso tibial posterior</th>
+              <td><input type="checkbox" id="pulso-tibial-izq-normal" name="pulso_tibial_izq_normal" value="si" aria-labelledby="pulso-tibial izq-normal"></td>
+              <td><input type="checkbox" id="pulso-tibial-izq-anormal" name="pulso_tibial_izq_anormal" value="si" aria-labelledby="pulso-tibial izq-anormal"></td>
+              <td><input type="checkbox" id="pulso-tibial-der-normal" name="pulso_tibial_der_normal" value="si" aria-labelledby="pulso-tibial der-normal"></td>
+              <td><input type="checkbox" id="pulso-tibial-der-anormal" name="pulso_tibial_der_anormal" value="si" aria-labelledby="pulso-tibial der-anormal"></td>
+            </tr>
+            <tr>
+              <th scope="row" id="monofilamento">Sensibilidad al monofilamento</th>
+              <td><input type="checkbox" id="monofilamento-izq-normal" name="monofilamento_izq_normal" value="si" aria-labelledby="monofilamento izq-normal"></td>
+              <td><input type="checkbox" id="monofilamento-izq-anormal" name="monofilamento_izq_anormal" value="si" aria-labelledby="monofilamento izq-anormal"></td>
+              <td><input type="checkbox" id="monofilamento-der-normal" name="monofilamento_der_normal" value="si" aria-labelledby="monofilamento der-normal"></td>
+              <td><input type="checkbox" id="monofilamento-der-anormal" name="monofilamento_der_anormal" value="si" aria-labelledby="monofilamento der-anormal"></td>
+            </tr>
+            <tr>
+              <th scope="row" id="reflejo-rotuliano">Reflejo rotuliano</th>
+              <td><input type="checkbox" id="reflejo-rotuliano-izq-normal" name="reflejo_rotuliano_izq_normal" value="si" aria-labelledby="reflejo-rotuliano izq-normal"></td>
+              <td><input type="checkbox" id="reflejo-rotuliano-izq-anormal" name="reflejo_rotuliano_izq_anormal" value="si" aria-labelledby="reflejo-rotuliano izq-anormal"></td>
+              <td><input type="checkbox" id="reflejo-rotuliano-der-normal" name="reflejo_rotuliano_der_normal" value="si" aria-labelledby="reflejo-rotuliano der-normal"></td>
+              <td><input type="checkbox" id="reflejo-rotuliano-der-anormal" name="reflejo_rotuliano_der_anormal" value="si" aria-labelledby="reflejo-rotuliano der-anormal"></td>
+            </tr>
+            <tr>
+              <th scope="row" id="reflejo-aquileo">Reflejo aquíleo</th>
+              <td><input type="checkbox" id="reflejo-aquileo-izq-normal" name="reflejo_aquileo_izq_normal" value="si" aria-labelledby="reflejo-aquileo izq-normal"></td>
+              <td><input type="checkbox" id="reflejo-aquileo-izq-anormal" name="reflejo_aquileo_izq_anormal" value="si" aria-labelledby="reflejo-aquileo izq-anormal"></td>
+              <td><input type="checkbox" id="reflejo-aquileo-der-normal" name="reflejo_aquileo_der_normal" value="si" aria-labelledby="reflejo-aquileo der-normal"></td>
+              <td><input type="checkbox" id="reflejo-aquileo-der-anormal" name="reflejo_aquileo_der_anormal" value="si" aria-labelledby="reflejo-aquileo der-anormal"></td>
+            </tr>
+            <tr>
+              <th scope="row" id="diapason">Diapasón</th>
+              <td><input type="checkbox" id="diapason-izq-normal" name="diapason_izq_normal" value="si" aria-labelledby="diapason izq-normal"></td>
+              <td><input type="checkbox" id="diapason-izq-anormal" name="diapason_izq_anormal" value="si" aria-labelledby="diapason izq-anormal"></td>
+              <td><input type="checkbox" id="diapason-der-normal" name="diapason_der_normal" value="si" aria-labelledby="diapason der-normal"></td>
+              <td><input type="checkbox" id="diapason-der-anormal" name="diapason_der_anormal" value="si" aria-labelledby="diapason der-anormal"></td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section aria-labelledby="plan-clinico-titulo">
+        <h2 id="plan-clinico-titulo">Diagnóstico, Terapéutica y Tratamiento</h2>
+        <div class="grid">
+          <div class="field">
+            <label for="diagnostico">Diagnóstico</label>
+            <textarea id="diagnostico" name="diagnostico" rows="3"></textarea>
+          </div>
+          <div class="field">
+            <label for="terapeutica">Terapéutica</label>
+            <textarea id="terapeutica" name="terapeutica" rows="3"></textarea>
+          </div>
+          <div class="field">
+            <label for="tratamiento">Tratamiento</label>
+            <textarea id="tratamiento" name="tratamiento" rows="3"></textarea>
+          </div>
+        </div>
+      </section>
+
+      <section aria-labelledby="firmas-titulo">
+        <h2 id="firmas-titulo">Firmas</h2>
+        <p class="signature">Nombre y firma del paciente: ______________________________</p>
+        <p class="signature">Nombre y firma del podólogo: ______________________________</p>
+      </section>
+    </form>
+  </main>
+</body>
+</html>
