@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Consultorio de Podología y Enfermería</title>
+  <style>
+    :root {
+      --rosa: #e91e63;
+      --morado: #673ab7;
+      --blanco: #ffffff;
+      --gris-claro: #f5f5f5;
+      --texto: #222222;
+      --texto-secundario: #444444;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--texto);
+      background-color: var(--blanco);
+      line-height: 1.6;
+    }
+
+    a {
+      color: var(--morado);
+      text-decoration: none;
+    }
+
+    a:focus-visible,
+    button:focus-visible,
+    input:focus-visible,
+    textarea:focus-visible {
+      outline: 3px solid var(--morado);
+      outline-offset: 2px;
+    }
+
+    header {
+      background-color: var(--blanco);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      border-bottom: 1px solid var(--gris-claro);
+    }
+
+    .skip-link {
+      position: absolute;
+      left: -999px;
+      top: 0;
+      background-color: var(--morado);
+      color: var(--blanco);
+      padding: 0.5rem 1rem;
+      border-radius: 0.5rem;
+      text-decoration: none;
+    }
+
+    .skip-link:focus {
+      left: 1rem;
+      top: 1rem;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0.75rem 1.5rem;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1rem;
+      padding: 0;
+      margin: 0;
+    }
+
+    nav a {
+      font-weight: 600;
+      padding: 0.5rem 0.75rem;
+      border-radius: 0.5rem;
+    }
+
+    nav a:hover {
+      background-color: var(--gris-claro);
+    }
+
+    .cta-button {
+      display: inline-block;
+      padding: 0.85rem 1.4rem;
+      background-color: var(--rosa);
+      color: var(--blanco);
+      border: none;
+      border-radius: 0.75rem;
+      font-size: 1rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: background-color 0.2s ease;
+    }
+
+    .cta-button:hover {
+      background-color: #d81b60;
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      align-items: center;
+      gap: 1.5rem;
+      padding: 3rem 1.5rem;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .hero h1 {
+      font-size: 2.1rem;
+      margin: 0 0 0.75rem 0;
+    }
+
+    .hero p {
+      margin: 0 0 1.25rem 0;
+      color: var(--texto-secundario);
+      font-size: 1.05rem;
+    }
+
+    section {
+      padding: 3rem 1.5rem;
+    }
+
+    section:nth-of-type(even) {
+      background-color: var(--gris-claro);
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 2rem;
+      font-size: 1.8rem;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1.5rem;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    article {
+      background-color: var(--blanco);
+      border-radius: 0.9rem;
+      padding: 1rem;
+      border: 1px solid #e0e0e0;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+    }
+
+    article h3 {
+      margin-top: 0.75rem;
+      margin-bottom: 0.5rem;
+      font-size: 1.15rem;
+      color: var(--morado);
+    }
+
+    article p {
+      margin: 0;
+      color: var(--texto-secundario);
+      font-size: 0.98rem;
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+      border-radius: 0.75rem;
+      border: 1px solid #e0e0e0;
+    }
+
+    .cert-list,
+    .faq-list {
+      max-width: 900px;
+      margin: 0 auto;
+      display: grid;
+      gap: 1rem;
+    }
+
+    .faq-item {
+      background-color: var(--blanco);
+      border-radius: 0.75rem;
+      padding: 1rem 1.25rem;
+      border: 1px solid #e0e0e0;
+    }
+
+    .faq-item h3 {
+      margin: 0 0 0.5rem 0;
+      color: var(--morado);
+      font-size: 1.05rem;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.5rem;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    form {
+      display: grid;
+      gap: 1rem;
+    }
+
+    label {
+      font-weight: 600;
+      display: block;
+      margin-bottom: 0.35rem;
+    }
+
+    input,
+    textarea {
+      width: 100%;
+      padding: 0.75rem;
+      border: 1px solid #cccccc;
+      border-radius: 0.6rem;
+      font-size: 1rem;
+    }
+
+    textarea {
+      min-height: 120px;
+      resize: vertical;
+    }
+
+    footer {
+      background-color: var(--morado);
+      color: var(--blanco);
+      text-align: center;
+      padding: 1.5rem 1rem;
+      font-size: 0.95rem;
+    }
+
+    .contact-links {
+      display: flex;
+      gap: 0.75rem;
+      flex-wrap: wrap;
+      margin-top: 0.75rem;
+    }
+
+    .contact-links a {
+      display: inline-block;
+      padding: 0.65rem 0.9rem;
+      border-radius: 0.6rem;
+      font-weight: 700;
+      color: var(--blanco);
+      background-color: var(--morado);
+    }
+
+    .contact-links a:hover {
+      background-color: #5a2ea6;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.001ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.001ms !important;
+        scroll-behavior: auto !important;
+      }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#contenido-principal">Saltar al contenido principal</a>
+  <header id="inicio">
+    <nav aria-label="Navegación principal">
+      <div aria-hidden="true" style="font-weight: 700; color: var(--rosa);">Podología y Enfermería</div>
+      <ul>
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#servicios">Servicios</a></li>
+        <li><a href="#certificaciones">Certificaciones</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="contenido-principal">
+    <section class="hero" aria-labelledby="titulo-principal">
+      <div>
+        <h1 id="titulo-principal">Cuidado podológico y de enfermería confiable</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec et ipsum eu massa iaculis volutpat.</p>
+        <div class="contact-links">
+          <a class="cta-button" href="#contacto">Agendar cita</a>
+          <a class="cta-button" href="tel:+520000000000" aria-label="Llamar al consultorio">Llamar</a>
+          <a class="cta-button" href="https://wa.me/0000000000" aria-label="Contactar por WhatsApp">WhatsApp</a>
+        </div>
+      </div>
+      <figure>
+        <img src="https://via.placeholder.com/1200x500" width="1200" height="500" alt="Profesional de podología atendiendo a paciente" loading="lazy">
+        <figcaption style="margin-top: 0.5rem; color: var(--texto-secundario);">Atención cercana y cuidadosa para pies sanos.</figcaption>
+      </figure>
+    </section>
+
+    <section id="servicios" aria-labelledby="servicios-titulo">
+      <h2 id="servicios-titulo" class="section-title">Servicios especializados</h2>
+      <div class="cards">
+        <article>
+          <img src="https://via.placeholder.com/400x300" width="400" height="300" alt="Servicio de podología clínica y preventiva" loading="lazy">
+          <h3>Podología clínica y preventiva</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae sapien molestie, luctus nulla in, tristique massa.</p>
+        </article>
+        <article>
+          <img src="https://via.placeholder.com/400x300" width="400" height="300" alt="Curación de heridas en pies" loading="lazy">
+          <h3>Curación de heridas</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae sapien molestie, luctus nulla in, tristique massa.</p>
+        </article>
+        <article>
+          <img src="https://via.placeholder.com/400x300" width="400" height="300" alt="Control y atención de pie diabético" loading="lazy">
+          <h3>Control de pie diabético</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae sapien molestie, luctus nulla in, tristique massa.</p>
+        </article>
+        <article>
+          <img src="https://via.placeholder.com/400x300" width="400" height="300" alt="Plantillas personalizadas para corregir la pisada" loading="lazy">
+          <h3>Plantillas para corregir la pisada</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae sapien molestie, luctus nulla in, tristique massa.</p>
+        </article>
+        <article>
+          <img src="https://via.placeholder.com/400x300" width="400" height="300" alt="Toma de signos vitales en consultorio" loading="lazy">
+          <h3>Toma de signos vitales</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae sapien molestie, luctus nulla in, tristique massa.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="certificaciones" aria-labelledby="certificaciones-titulo">
+      <h2 id="certificaciones-titulo" class="section-title">Formación y certificaciones</h2>
+      <div class="cert-list">
+        <article>
+          <h3>Diplomado en Podología Clínica</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus pretium velit non pulvinar lobortis.</p>
+        </article>
+        <article>
+          <h3>Certificación en Manejo de Pie Diabético</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus pretium velit non pulvinar lobortis.</p>
+        </article>
+        <article>
+          <h3>Curso avanzado en Curación de Heridas</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus pretium velit non pulvinar lobortis.</p>
+        </article>
+        <article>
+          <h3>Entrenamiento en Biomecánica y Plantillas</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus pretium velit non pulvinar lobortis.</p>
+        </article>
+        <article>
+          <h3>Actualización en Signos Vitales y Monitoreo</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus pretium velit non pulvinar lobortis.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="faq" aria-labelledby="faq-titulo">
+      <h2 id="faq-titulo" class="section-title">Preguntas frecuentes</h2>
+      <div class="faq-list" role="list">
+        <article class="faq-item" role="listitem">
+          <h3>¿Con qué frecuencia debo acudir a podología?</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer mattis, lorem ut vestibulum auctor, nulla metus sollicitudin sapien.</p>
+        </article>
+        <article class="faq-item" role="listitem">
+          <h3>¿Atienden a pacientes con pie diabético?</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer mattis, lorem ut vestibulum auctor, nulla metus sollicitudin sapien.</p>
+        </article>
+        <article class="faq-item" role="listitem">
+          <h3>¿Necesito receta médica para una consulta?</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer mattis, lorem ut vestibulum auctor, nulla metus sollicitudin sapien.</p>
+        </article>
+        <article class="faq-item" role="listitem">
+          <h3>¿Cómo prepararme para mi cita?</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer mattis, lorem ut vestibulum auctor, nulla metus sollicitudin sapien.</p>
+        </article>
+        <article class="faq-item" role="listitem">
+          <h3>¿Ofrecen visitas a domicilio?</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer mattis, lorem ut vestibulum auctor, nulla metus sollicitudin sapien.</p>
+        </article>
+        <article class="faq-item" role="listitem">
+          <h3>¿Cómo se manejan los datos personales?</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer mattis, lorem ut vestibulum auctor, nulla metus sollicitudin sapien.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="contacto" aria-labelledby="contacto-titulo">
+      <h2 id="contacto-titulo" class="section-title">Contacto</h2>
+      <div class="contact-grid">
+        <div>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vitae nisl id mi venenatis sodales. Donec lacinia, ex in gravida sollicitudin, nibh est dapibus lacus, vitae luctus dolor nunc et odio.</p>
+          <p><strong>Horario:</strong> Lunes a sábado, 9:00 - 19:00</p>
+          <p><strong>Zona de atención:</strong> Área metropolitana</p>
+          <div class="contact-links">
+            <a href="tel:+520000000000">Llamar</a>
+            <a href="https://wa.me/0000000000">WhatsApp</a>
+            <a href="#">Mapa de referencia</a>
+          </div>
+        </div>
+        <form aria-label="Formulario de contacto">
+          <div>
+            <label for="nombre">Nombre</label>
+            <input type="text" id="nombre" name="nombre" autocomplete="name" required>
+          </div>
+          <div>
+            <label for="telefono">Teléfono</label>
+            <input type="tel" id="telefono" name="telefono" autocomplete="tel" required>
+          </div>
+          <div>
+            <label for="correo">Correo electrónico</label>
+            <input type="email" id="correo" name="correo" autocomplete="email" required>
+          </div>
+          <div>
+            <label for="mensaje">Mensaje</label>
+            <textarea id="mensaje" name="mensaje" required></textarea>
+          </div>
+          <button class="cta-button" type="submit">Enviar mensaje</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Consultorio de Podología y Enfermería · Lorem ipsum dolor sit amet.</p>
+  </footer>
+</body>
+</html>
