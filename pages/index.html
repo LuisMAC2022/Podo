@@ -4,328 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Enfermería y Podología Soberanes</title>
-  <style>
-    :root {
-      --rosa: #e91e63;
-      --morado: #673ab7;
-      --blanco: #f6c0ed;
-      --gris-claro: #f5f5f5;
-      --texto: #222222;
-      --texto-secundario: #444444;
-    }
+  <link rel="preload" href="../assets/css/home.css" as="style">
+  <link rel="stylesheet" href="../assets/css/home.css">
 
-    * {
-      box-sizing: border-box;
-    }
-
-    body {
-      margin: 0;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      color: var(--texto);
-      background-color: var(--blanco);
-      line-height: 1.6;
-    }
-
-    a {
-      color: var(--morado);
-      text-decoration: none;
-    }
-
-    a:focus-visible,
-    button:focus-visible,
-    input:focus-visible,
-    textarea:focus-visible {
-      outline: 3px solid var(--morado);
-      outline-offset: 2px;
-    }
-
-    header {
-      background-color: var(--blanco);
-      position: sticky;
-      top: 0;
-      z-index: 10;
-      border-bottom: 1px solid var(--gris-claro);
-    }
-
-    .skip-link {
-      position: absolute;
-      left: -999px;
-      top: 0;
-      background-color: var(--morado);
-      color: var(--blanco);
-      padding: 0.5rem 1rem;
-      border-radius: 0.5rem;
-      text-decoration: none;
-    }
-
-    .skip-link:focus {
-      left: 1rem;
-      top: 1rem;
-    }
-
-    nav {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 0.75rem 1.5rem;
-    }
-
-    .brand {
-      font-weight: 700;
-      color: var(--rosa);
-      animation: slide-in-inertia 1.1s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
-    }
-
-    nav ul {
-      list-style: none;
-      display: flex;
-      gap: 1rem;
-      padding: 0;
-      margin: 0;
-    }
-
-    @keyframes slide-in-inertia {
-      0% {
-        transform: translateX(-28px);
-        opacity: 0;
-      }
-
-      55% {
-        opacity: 1;
-      }
-
-      75% {
-        transform: translateX(0);
-      }
-
-      90% {
-        transform: translateX(8px);
-      }
-
-      100% {
-        transform: translateX(0);
-      }
-    }
-
-    @media (prefers-reduced-motion: reduce) {
-      .brand {
-        animation: none;
-      }
-    }
-
-    nav a {
-      font-weight: 600;
-      padding: 0.5rem 0.75rem;
-      border-radius: 0.5rem;
-    }
-
-    nav a:hover {
-      background-color: var(--gris-claro);
-    }
-
-    .cta-button {
-      display: inline-block;
-      padding: 0.85rem 1.4rem;
-      background-color: var(--rosa);
-      color: var(--blanco);
-      border: none;
-      border-radius: 0.75rem;
-      font-size: 1rem;
-      font-weight: 700;
-      cursor: pointer;
-      transition: background-color 0.2s ease;
-    }
-
-    .cta-button:hover {
-      background-color: #d81b60;
-    }
-
-    .hero {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      align-items: center;
-      gap: 1.5rem;
-      padding: 3rem 1.5rem;
-      max-width: 1100px;
-      margin: 0 auto;
-    }
-
-    .hero h1 {
-      font-size: 2.1rem;
-      margin: 0 0 0.75rem 0;
-    }
-
-    .hero p {
-      margin: 0 0 1.25rem 0;
-      color: var(--texto-secundario);
-      font-size: 1.05rem;
-    }
-
-    section {
-      padding: 3rem 1.5rem;
-    }
-
-    section:nth-of-type(even) {
-      background-color: var(--gris-claro);
-    }
-
-    .section-title {
-      text-align: center;
-      margin-bottom: 2rem;
-      font-size: 1.8rem;
-    }
-
-    .cards {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 1.5rem;
-      max-width: 1100px;
-      margin: 0 auto;
-    }
-
-    article {
-      background-color: var(--blanco);
-      border-radius: 0.9rem;
-      padding: 1rem;
-      border: 1px solid #e0e0e0;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
-    }
-
-    article h3 {
-      margin-top: 0.75rem;
-      margin-bottom: 0.5rem;
-      font-size: 1.15rem;
-      color: var(--morado);
-    }
-
-    article p {
-      margin: 0;
-      color: var(--texto-secundario);
-      font-size: 0.98rem;
-    }
-
-    img {
-      width: 100%;
-      height: auto;
-      border-radius: 0.75rem;
-      border: 1px solid #e0e0e0;
-    }
-
-    .cert-list,
-    .faq-list {
-      max-width: 900px;
-      margin: 0 auto;
-      display: grid;
-      gap: 1rem;
-    }
-
-    .faq-item {
-      background-color: var(--blanco);
-      border-radius: 0.75rem;
-      padding: 1rem 1.25rem;
-      border: 1px solid #e0e0e0;
-    }
-
-    .faq-item h3 {
-      margin: 0 0 0.5rem 0;
-      color: var(--morado);
-      font-size: 1.05rem;
-    }
-
-    .contact-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 1.5rem;
-      max-width: 1000px;
-      margin: 0 auto;
-    }
-
-    form {
-      display: grid;
-      gap: 1rem;
-    }
-
-    label {
-      font-weight: 600;
-      display: block;
-      margin-bottom: 0.35rem;
-    }
-
-    input,
-    textarea {
-      width: 100%;
-      padding: 0.75rem;
-      border: 1px solid #cccccc;
-      border-radius: 0.6rem;
-      font-size: 1rem;
-    }
-
-    textarea {
-      min-height: 120px;
-      resize: vertical;
-    }
-
-    footer {
-      background-color: var(--morado);
-      color: var(--blanco);
-      text-align: center;
-      padding: 1.5rem 1rem;
-      font-size: 0.95rem;
-    }
-
-    .contact-links {
-      display: flex;
-      gap: 0.75rem;
-      flex-wrap: wrap;
-      margin-top: 0.75rem;
-    }
-
-    .contact-links a {
-      display: inline-block;
-      padding: 0.65rem 0.9rem;
-      border-radius: 0.6rem;
-      font-weight: 700;
-      color: var(--blanco);
-      background-color: var(--morado);
-    }
-
-    .contact-links a:hover {
-      background-color: #5a2ea6;
-    }
-
-    .map-card {
-      margin-top: 1.25rem;
-      border: 1px solid #e0e0e0;
-      border-radius: 0.9rem;
-      overflow: hidden;
-      background-color: var(--blanco);
-      box-shadow: 0 6px 14px rgba(0, 0, 0, 0.04);
-    }
-
-    .map-card iframe {
-      width: 100%;
-      min-height: 260px;
-      border: 0;
-      display: block;
-    }
-
-    .map-card figcaption {
-      padding: 0.75rem 1rem;
-      font-size: 0.95rem;
-      color: var(--texto-secundario);
-    }
-
-    @media (prefers-reduced-motion: reduce) {
-      *, *::before, *::after {
-        animation-duration: 0.001ms !important;
-        animation-iteration-count: 1 !important;
-        transition-duration: 0.001ms !important;
-        scroll-behavior: auto !important;
-      }
-    }
-  </style>
 </head>
 <body>
   <a class="skip-link" href="#contenido-principal">Saltar al contenido principal</a>
@@ -353,8 +34,8 @@
         </div>
       </div>
       <figure>
-        <img src="main_logo.jpeg" width="1200" height="500" alt="Logo Podologia soberanes" loading="eager" decoding="async">
-        <figcaption style="margin-top: 0.5rem; color: var(--texto-secundario);">Cuidando tus pies con el corazon.</figcaption>
+        <img src="../assets/images/main_logo.jpeg" width="1200" height="500" alt="Logo Podologia soberanes" loading="eager" decoding="async">
+        <figcaption class="figure-caption">Cuidando tus pies con el corazon.</figcaption>
       </figure>
     </section>
 
@@ -362,17 +43,17 @@
       <h2 id="servicios-titulo" class="section-title">Servicios especializados</h2>
       <div class="cards">
         <article>
-          <img src="model3.png" width="400" height="300" alt="Podóloga utilizando instrumento esterilizado para tratar una uña" loading="lazy" decoding="async">
+          <img src="../assets/images/model3.png" width="400" height="300" alt="Podóloga utilizando instrumento esterilizado para tratar una uña" loading="lazy" decoding="async">
           <h3>Curación de heridas</h3>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae sapien molestie, luctus nulla in, tristique massa.</p>
         </article>
         <article>
-          <img src="model2.png" width="400" height="300" alt="Enfermera limpiando una herida en el pie con material estéril" loading="lazy" decoding="async">
+          <img src="../assets/images/model2.png" width="400" height="300" alt="Enfermera limpiando una herida en el pie con material estéril" loading="lazy" decoding="async">
           <h3>Fisioterapia y Rehabilitacion</h3>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae sapien molestie, luctus nulla in, tristique massa.</p>
         </article>
         <article>
-          <img src="model1.png" width="400" height="300" alt="Profesional revisando circulación en el pie de una persona" loading="lazy" decoding="async">
+          <img src="../assets/images/model1.png" width="400" height="300" alt="Profesional revisando circulación en el pie de una persona" loading="lazy" decoding="async">
           <h3>Podologia</h3>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae sapien molestie, luctus nulla in, tristique massa.</p>
         </article>
