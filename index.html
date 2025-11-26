@@ -72,12 +72,47 @@
       padding: 0.75rem 1.5rem;
     }
 
+    .brand {
+      font-weight: 700;
+      color: var(--rosa);
+      animation: slide-in-inertia 1.1s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+    }
+
     nav ul {
       list-style: none;
       display: flex;
       gap: 1rem;
       padding: 0;
       margin: 0;
+    }
+
+    @keyframes slide-in-inertia {
+      0% {
+        transform: translateX(-28px);
+        opacity: 0;
+      }
+
+      55% {
+        opacity: 1;
+      }
+
+      75% {
+        transform: translateX(0);
+      }
+
+      90% {
+        transform: translateX(8px);
+      }
+
+      100% {
+        transform: translateX(0);
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .brand {
+        animation: none;
+      }
     }
 
     nav a {
@@ -296,7 +331,7 @@
   <a class="skip-link" href="#contenido-principal">Saltar al contenido principal</a>
   <header id="inicio">
     <nav aria-label="Navegación principal">
-      <div aria-hidden="true" style="font-weight: 700; color: var(--rosa);">Enfermería y Podología Soberanes</div>
+      <div class="brand" aria-hidden="true">Enfermería y Podología Soberanes</div>
       <ul>
         <li><a href="#inicio">Inicio</a></li>
         <li><a href="#servicios">Servicios</a></li>
