@@ -72,6 +72,13 @@
       padding: 0.75rem 1.5rem;
     }
 
+    .brand-title {
+      font-weight: 700;
+      color: var(--rosa);
+      transform: translateX(-120%);
+      animation: brandEntrance 1s ease-in forwards;
+    }
+
     nav ul {
       list-style: none;
       display: flex;
@@ -88,6 +95,21 @@
 
     nav a:hover {
       background-color: var(--gris-claro);
+    }
+
+    @keyframes brandEntrance {
+      0% {
+        transform: translateX(-120%);
+      }
+      60% {
+        transform: translateX(8%);
+      }
+      80% {
+        transform: translateX(-3%);
+      }
+      100% {
+        transform: translateX(0);
+      }
     }
 
     .cta-button {
@@ -296,7 +318,7 @@
   <a class="skip-link" href="#contenido-principal">Saltar al contenido principal</a>
   <header id="inicio">
     <nav aria-label="Navegación principal">
-      <div aria-hidden="true" style="font-weight: 700; color: var(--rosa);">Enfermería y Podología Soberanes</div>
+      <div class="brand-title" aria-hidden="true">Enfermería y Podología Soberanes</div>
       <ul>
         <li><a href="#inicio">Inicio</a></li>
         <li><a href="#servicios">Servicios</a></li>
